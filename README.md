@@ -1,6 +1,6 @@
 # abevjava-docker image
 
-Készült a magyarországon alkalmazott ÁNYK-AbevJava nyomtatvány kezelő alkalmazáshoz.
+Készült a Magyarországon alkalmazott ÁNYK-AbevJava nyomtatvány kezelő alkalmazáshoz.
 
 ## Getting Started
 
