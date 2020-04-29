@@ -2,15 +2,15 @@
 
 Készült a Magyarországon alkalmazott ÁNYK-AbevJava nyomtatvány kezelő alkalmazáshoz.
 
-## Getting Started
+## Kezdő lépések
 
-### Install
+### Telepítés
 
 ```
 docker pull dobrosi/abevjava
 ```
 
-### Run
+### Futtatás
 
 ```
 docker run -it --rm --privileged \
@@ -21,7 +21,7 @@ docker run -it --rm --privileged \
 	./abevjava_start
 ```
 
-### Build
+### Fordítás
 
 ```
 docker build -t dobrosi/abevjava .
