@@ -1,0 +1,19 @@
+#abev-java docker image
+
+##instal
+```
+docker pull dobrosi/abevjava
+```
+##start
+```
+docker run -it --rm --privileged \
+	--net=host --env="DISPLAY" \
+	-v "$HOME/.Xauthority:/root/.Xauthority:rw" \
+	-v "$HOME/abevjava:/root/abevjava" \
+	dobrosi/abevjava \
+	./abevjava_start
+	```
+##build
+```
+docker build -t dobrosi/abevjava .
+```
