@@ -1,4 +1,6 @@
-# abev-java docker image
+# abevjava-docker image
+
+Készült a magyarországon alkalmazott ÁNYK-AbevJava nyomtatvány kezelő alkalmazáshoz.
 
 ## Getting Started
 
@@ -17,7 +19,7 @@ docker run -it --rm --privileged \
 	-v "$HOME/abevjava:/root/abevjava" \
 	dobrosi/abevjava \
 	./abevjava_start
-	```
+```
 
 ### Build
 
