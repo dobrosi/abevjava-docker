@@ -24,5 +24,7 @@ docker run -it --rm --privileged \
 ### Fordítás
 
 ```
+git clone https://github.com/dobrosi/abevjava-docker
+cd abevjava-docker
 docker build -t dobrosi/abevjava .
 ```
