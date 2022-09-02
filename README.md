@@ -10,17 +10,25 @@ Készült a Magyarországon alkalmazott ÁNYK-AbevJava nyomtatvány kezelő alka
 docker pull dobrosi/abevjava
 ```
 
-### Futtatás
+### Futtatás Linux-on
 
 ```
 docker run -it --rm --privileged \
-	--net=host --env="DISPLAY" \
-	-v "$HOME/.Xauthority:/root/.Xauthority:rw" \
+	--net=host --env="DISPLAY=:0" \
 	-v "$HOME/abevjava:/root/abevjava" \
 	dobrosi/abevjava \
 	./abevjava_start
 ```
 
+### Futtatás Windows-on
+
+```
+docker run -it --rm --privileged \
+	--net=host --env="DISPLAY=host.docker.internal:0" \
+	-v "$HOME/abevjava:/root/abevjava" \
+	dobrosi/abevjava \
+	./abevjava_start
+```
 ### Fordítás
 
 ```
