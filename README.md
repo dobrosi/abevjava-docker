@@ -1,36 +1,22 @@
 # abevjava-docker image
-
 Készült a Magyarországon alkalmazott ÁNYK-AbevJava nyomtatvány kezelő alkalmazáshoz.
-
-## Kezdő lépések
-
-### Telepítés
-
+## Telepítés Linux-on
 ```
-docker pull dobrosi/abevjava
+docker run --name abevjava \
+    --env=DISPLAY=:0 \
+    -v $HOME/abevjava:/root/abevjava \
+    dobrosi/abevjava \
+    ./abevjava_start
 ```
-
-### Futtatás Linux-on
-
+## Telepítés Windows-on
 ```
-docker run -it --rm --privileged \
-	--net=host --env="DISPLAY=:0" \
-	-v "$HOME/abevjava:/root/abevjava" \
-	dobrosi/abevjava \
-	./abevjava_start
+docker run --name abevjava --env=DISPLAY=host.docker.internal:0 -v %USERPROFILE%/abevjava:/root/abevjava dobrosi/abevjava ./abevjava_start
 ```
-
-### Futtatás Windows-on
-
+## Futtatás
 ```
-docker run -it --rm --privileged \
-	--net=host --env="DISPLAY=host.docker.internal:0" \
-	-v "$HOME/abevjava:/root/abevjava" \
-	dobrosi/abevjava \
-	./abevjava_start
+docker start abevjava
 ```
-### Fordítás
-
+## Fordítás
 ```
 git clone https://github.com/dobrosi/abevjava-docker
 cd abevjava-docker
